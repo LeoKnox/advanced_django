@@ -16,6 +16,7 @@ class Post(models.Model):
   return '{}: {}'.format(self.author, self.content[0:20])
 
 '''
+# in views.py
 def add_post(request):
   if request.method == "POST":
     form = PostForm(request.POST)
