@@ -14,3 +14,17 @@ class Post(models.Model):
   
   def __str__(self):
   return '{}: {}'.format(self.author, self.content[0:20])
+
+'''
+def add_post(request):
+  if request.method == "POST":
+    form = PostForm(request.POST)
+    if form.is_valid():
+      new_post = Post.objects.create(
+        content = form.cleaned_data['content'],
+        author = request.user
+      )
+      new_post.save()
+    else:
+      print(form.errors)
+'''
